@@ -106,6 +106,10 @@ img {
   margin-right: 50px;
 }
 
+#navigation li a.current-page {
+  color: var(--accent-color);
+}
+
 /* =================Контакты ================*/
 .contacts-list {
   display: flex;
@@ -367,8 +371,15 @@ img {
   border-radius: 4px;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
+  background-color: var(--white-text);
   border-color: var(--accent-color);
+}
+
+.clients-link:hover > svg,
+.clients-link:focus > svg {
+  fill: var(--accent-color);
 }
 
 .icons-client-company {
@@ -497,6 +508,10 @@ img {
   background-color: var(--second-background-color);
 }
 
+#filter li a.current-button {
+  color: var(--accent-color);
+}
+
 .portfolio-button:hover,
 .portfolio-button:focus {
   color: var(--white-text);
@@ -521,7 +536,11 @@ img {
   border: 1px solid var(--border-box-portfolio);
 }
 
-.portfolio-items:hover {
+.portfolio-link {
+  display: inline-block;
+}
+
+.portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
